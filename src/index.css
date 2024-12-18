@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: #000000;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  
+}
+
+h1 {
+  @apply text-3xl font-bold mb-4;
+}
+
+p {
+  @apply mb-4;
+}
+
+ul {
+  @apply list-disc list-inside;
+}
+
+strong {
+  @apply font-bold text-indigo-400;
+}
+
+em {
+  @apply italic text-pink-500;
+}
+
+
+.btn-primary {
+  @apply bg-indigo-500 text-white font-bold py-2 px-4 rounded-xl hover:bg-indigo-700 transition-all duration-200 ease-in-out;
+}
+
+.btn-primary:disabled {
+  @apply bg-indigo-500 text-white font-bold py-2 px-4 rounded-xl opacity-50 cursor-not-allowed;
+}
+
+.chat-container {
+  @apply flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-white bg-opacity-5 h-full p-4;
+}
+
+.chat-messages {
+  @apply flex flex-col h-full overflow-x-auto mb-4 overflow-scroll;
+}
+
+
+/* Animations */
+
+.fade-in { animation: fadeIn .3s; }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Contenedor principal del chat */
+.landbot-chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* O ajusta según la altura de tu layout */
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Contenedor de mensajes */
+.landbot-messages-container {
+  flex: 1; /* El contenedor ocupa todo el espacio vertical disponible */
+  overflow-y: auto; /* Scroll cuando los mensajes exceden el espacio */
+  padding: 10px; /* Espaciado interno */
+  box-sizing: border-box;
+}
+
+/* Input fijo en la parte inferior */
+.landbot-input {
+  height: 60px; /* Altura del input */
+  background-color: #2d2d2d; /* Color del fondo del input */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra superior */
+  display: flex;
+  align-items: center;
+  padding: 0 10px; /* Espaciado interno */
+  box-sizing: border-box;
+}

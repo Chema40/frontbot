@@ -1,0 +1,6 @@
+export * from './events/EventsPage'
+export * from './pricing/PricingPage'
+export * from './returns/ReturnsPage'
+export * from './sales/SalesPage'
+export * from './shipping/ShippingPage'
+export * from './technical-assistance/TechnicalAssistancePage'
